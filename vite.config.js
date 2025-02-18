@@ -11,7 +11,7 @@ export default defineConfig({
       targets: [
         { src: 'manifest.json', dest: '' },  // Копіює manifest.json в корінь dist/
         { src: 'icons/**/*', dest: 'icons' },  // Копіює іконки в dist/icons
-        { src: 'background/background.js', dest: 'background' }  // Копіює background.js в dist/background
+        { src: 'background.js', dest: '' }  // Копіює background.js в dist/background
       ]
     })
   ],
@@ -20,7 +20,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         popup: 'popup/popup.html',
-        background: 'background/background.js', // Вказуємо вхідний файл для background
+        background: 'background.js',
       },
       output: {
         entryFileNames: '[name].js',
